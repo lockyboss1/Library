@@ -1,0 +1,40 @@
+﻿@page "{id?}"
+@model Library.Pages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="jumbotron p-3">
+    <div class="d-flex align-items-center">
+        <h1 class="display-4 flex-grow-1">
+            Library Edit
+        </h1>
+        <a class="btn btn-primary btn-sm" asp-page="./Index">
+            Back to List
+        </a>
+    </div>
+</div>
+
+<form method="post">
+    <div class="form-group d-flex">
+        <label asp-for="User.Name" class="p-2 text-right" style="flex:0 0 15%"></label>
+        <input asp-for="User.Name" class="form-control" style="flex:1 0 auto;width:auto" />
+
+        <label asp-for="User.Author" class="p-2 text-right" style="flex:0 0 15%"></label>
+        <input asp-for="User.Author" class="form-control" style="flex:1 0 auto;width:auto" />
+
+        <label asp-for="User.PageCount" class="p-2 text-right" style="flex:0 0 15%"></label>
+        <input asp-for="User.PageCount" class="form-control" style="flex:1 0 auto;width:auto" />
+
+        <label asp-for="User.Year" class="p-2 text-right" style="flex:0 0 15%"></label>
+        <input asp-for="User.Year" class="form-control" style="flex:1 0 auto;width:auto" />
+
+        <label asp-for="User.Read" class="p-2 text-right" style="flex:0 0 15%"></label>
+        <input asp-for="User.Read" class="form-control" style="flex:1 0 auto;width:auto" />
+
+        <div class="d-flex flex-row-reverse">
+            <input type="submit" value="Save" class="btn btn-primary btn-sm" />
+        </div>
+    </div>
+</form>
