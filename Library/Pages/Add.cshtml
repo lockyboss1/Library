@@ -1,14 +1,14 @@
-﻿@page "{id?}"
-@model Library.Pages.EditModel
+﻿@page
+@model Library.Pages.AddModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Add";
 }
 
 <div class="jumbotron p-3">
     <div class="d-flex align-items-center">
         <h1 class="display-4 flex-grow-1">
-            Edit Book
+            Add Book
         </h1>
         <a class="btn btn-primary btn-sm" asp-page="./Index">
             <i class="fas fa-chevron-left"></i>Back to List
@@ -20,7 +20,7 @@
     <div class="wrapper">
         <div id="hide-id" class="form-row">
             <label asp-for="User.ID">ID:</label>
-            <input asp-for="User.ID"/>
+            <input asp-for="User.ID" />
         </div>
 
         <div class="form-row">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="form-row">
-            <label asp-for="User.Read">Read?:</label>
+            <label asp-for="User.Read">Read?</label>
             <input asp-for="User.Read" />
             <span asp-validation-for="User.Read" class="text-danger"></span>
         </div>

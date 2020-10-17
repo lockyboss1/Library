@@ -1,33 +1,33 @@
 ﻿@page
 @model IndexModel
+
 @{
     ViewData["Title"] = "Home page";
 }
 
 <div class="jumbotron p-3 d-flex align-items-center">
     <h1 class="display-4 flex-grow-1">.NET Library</h1>
-    <a class="btn btn-primary btn-sm" asp-page="./Edit">Add Book</a>
+    <a class="btn btn-primary btn-sm" asp-page="./Add"><i class="fas fa-plus"></i>Add Book</a>
 </div>
 
-@foreach (var item in Model.User)
- { 
-    <div class="cards">
-        <div class="card">
-            <div>
-                <p class="name">@item.Name</p>
-            </div>
-            
-            <p class="author">Author: @item.Author</p>
-            <p class="pagecount">Page Count: @item.PageCount</p>
-            <p class="year">Year Published: @item.Year</p>
-            <p class="read">Read: @item.Read</p>
+<div class="cards">
+    @foreach (var item in Model.User)
+    {
+    <div class="card">
+        <p class="name"><i class="fas fa-book"></i>@item.Name</p>
+        <p class="id">ID: @item.ID</p>
+        <p class="author">Author: @item.Author</p>
+        <p class="pagecount">Page Count: @item.PageCount</p>
+        <p class="year">Year Published: @item.Year</p>
+        <p class="read">Read: @(item.Read ? "Yes" : "No")</p>
 
-            <form class="p-2 btn-group" style="flex:0 0 25%" role="group" method="post">
-                <a class="btn btn-primary btn-sm" asp-page="./Detail" asp-route-id="@item.ID">Details</a>
-                <a class="btn btn-primary btn-sm" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
-                <input type="submit" value="Delete" class="btn btn-danger btn-sm" />
-                <input type="hidden" name="ID" value="@item.ID" />
-            </form>
-        </div>
+        <form class="p-2 btn-group" style="flex:0 0 25%" role="group" method="post">
+            <a class="btn btn-primary btn-sm" asp-page="./Detail" asp-route-id="@item.ID"><i class="fas fa-info"></i>Details</a>
+            <a class="btn btn-primary btn-sm" asp-page="./Edit" asp-route-id="@item.ID"><i class="fas fa-edit"></i>Edit</a>
+            <input type="submit" value="Delete" class="btn btn-danger btn-sm" />
+            <input type="hidden" name="ID" value="@item.ID" />
+        </form>
     </div>
- }
+     }
+</div>
+

@@ -72,30 +72,87 @@ body {
 
 /* Custom CSS styles
 -------------------------------------------------- */
+footer {
+    background-color: white;
+}
+
 body {
     font-family: AvenirNext, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #2d545e;
 }
 
 .cards {
-    width: 900px;
-    padding: .5em;
-    margin: 0 auto;
     display: grid;
-    grid-row-gap: 16px;
-    grid-column-gap: 12px;
-    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 3fr));
 }
 
 .card {
     border: 2px solid #e7e7e7;
     border-radius: 4px;
     padding: .5rem;
+    background-color: #e1b382;
 }
 
 p {
     padding: 0 20px 20px;
 }
 
-button {
-    padding: 10px;
+.name {
+    text-align: center;
+    padding-top: 10px;
+    background-color: aliceblue;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.fa-book, .fa-trash-alt, .fa-info, .fa-edit, .fa-plus, .fa-chevron-left {
+    padding-right: 5px
+}
+
+.wrapper {
+    padding: 0;
+    border-radius: 3px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+}
+
+.form-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1; 
+}
+
+label {
+    color: #e1b382;
+}
+
+.form-row > input {
+    flex: 2;
+}
+
+.edit-button {
+    text-align: center;
+}
+
+.myButton {
+    padding: 14px 40px;
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+    transition-duration: 0.4s;
+}
+
+.myButton:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+#hide-id {
+    display: none;
 }
