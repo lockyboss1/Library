@@ -10,6 +10,16 @@
     <a class="btn btn-primary btn-sm" asp-page="./Add"><i class="fas fa-plus"></i>Add Book</a>
 </div>
 
+<div class="search-box">
+    <form class="">
+        <input class="search-form" type="text" asp-for="SearchString" placeholder="Search by Book Name"/>
+        <br />
+        <input type="submit" value="Search" class="search-button"/>
+    </form>
+</div>
+
+<br />
+
 <div class="cards">
     @foreach (var item in Model.User)
     {

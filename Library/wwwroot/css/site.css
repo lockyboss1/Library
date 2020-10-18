@@ -156,3 +156,46 @@ label {
 #hide-id {
     display: none;
 }
+
+.search-box {
+    text-align: center;
+}
+
+.search-form {
+    width: 250px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #e1b382;
+    color: black;
+}
+
+input:focus {
+    outline: none;
+}
+
+.search-form:focus {
+    width: 50%;
+    background-color: white;
+}
+
+.search-button {
+    background-color: white;
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    font: bold .9em sans-serif;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.search-button:hover {
+    background-color: #008CBA;
+    color: white;
+}
