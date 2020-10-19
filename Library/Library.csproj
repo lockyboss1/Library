@@ -19,5 +19,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Google.Apis.Books.v1" Version="1.49.0.2111" />
+    <PackageReference Include="Google.Apis" Version="1.49.0" />
   </ItemGroup>
 </Project>

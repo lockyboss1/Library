@@ -11,24 +11,64 @@
             Book Details
         </h1>
         <a class="btn btn-primary btn-sm" asp-page="./Index">
-            Back to List
+            <i class="fas fa-chevron-left"></i>Back to List
         </a>
     </div>
 </div>
 
-<div class="d-flex">
-    <div class="p-2 bg-primary text-white text-right" style="flex:0 0 15%">
-        @Html.DisplayNameFor(model => model.User.ID)
-    </div>
-    <div class="p-2 border-top border-right border-bottom border-primary" style="flex:1 0 auto">
-        @Html.DisplayFor(model => model.User.ID)
-    </div>
+<div class="disableInput">
+    <label asp-for="User.ISBN">ISBN Number:</label>
+    <input asp-for="User.ISBN" readonly />
 </div>
-<div class="d-flex">
-    <div class="p-2 bg-primary text-white text-right" style="flex:0 0 15%">
-        @Html.DisplayNameFor(model => model.User.Name)
-    </div>
-    <div class="p-2 border-right border-bottom border-primary" style="flex:1 0 auto">
-        @Html.DisplayFor(model => model.User.Name)
-    </div>
+
+<div class="details-row">
+    <h1 class="details-name"></h1>
 </div>
+
+<div class="details-row">
+    <h3 class="details-subtitle"></h3>
+</div>
+
+<div class="details-row">
+    <label>Author:</label>
+    <p class="details-author"></p>
+</div>
+
+<div class="details-row">
+    <label>Description:</label>
+    <p class="details-description"></p>
+</div>
+
+<div class="details-row">
+    <label>Category:</label>
+    <p class="details-category"></p>
+</div>
+
+<div class="details-row">
+    <label>Page Count:</label>
+    <p class="details-pageCount"></p>
+</div>
+
+<div class="details-row">
+    <label>Publisher:</label>
+    <p class="details-publisher"></p>
+</div>
+
+<div class="details-row">
+    <label>Published Date:</label>
+    <p class="details-publishedDate"></p>
+</div>
+
+<div class="details-row">
+    <label>Rating (of 5):</label>
+    <p class="details-rating"></p>
+</div>
+
+<div class="details-row">
+    <label>Language:</label>
+    <p class="details-language"></p>
+</div>
+
+<div class="details-picture"></div>
+
+<div id="viewerCanvas" style="width: 600px; height: 500px"></div>

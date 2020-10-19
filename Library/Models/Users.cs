@@ -15,12 +15,8 @@ namespace Library.Models
         public string Author { get; set; }
 
         [Required]
-        [Range(1, 2020)]
-        public int PageCount { get; set; }
-
-        [Required]
-        [Range(1, 2020)]
-        public int Year { get; set; }
+        //[RegularExpression("^[ISBN]{4}[ ]{0,1}[0-9]{1}[-]{1}[0-9]{3}[-]{1}[0-9]{5}[-]{1}[0-9]{0,1}$", ErrorMessage = "Invalid ISBN Number")]
+        public string ISBN { get; set; }
 
         public bool Read { get; set; }
     }
